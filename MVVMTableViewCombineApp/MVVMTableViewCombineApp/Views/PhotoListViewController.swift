@@ -22,8 +22,10 @@ class PhotoListViewController: UIViewController {
 
     func initVM() {
         viewModel.$photoNames.sink { [weak self] photoNames in
-            if photoNames.count > 0 {
-                self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                if photoNames.count > 0 {
+                    self?.tableView.reloadData()
+                }
             }
         }.store(in: &cancellables)
         
