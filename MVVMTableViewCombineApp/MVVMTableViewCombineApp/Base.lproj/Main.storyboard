@@ -19,6 +19,56 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OaT-Kw-LoD">
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PhotoTableViewCell" rowHeight="70" id="4a0-Xe-Slr" customClass="PhotoListTableViewCell" customModule="MVVMTableViewCombineApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4a0-Xe-Slr" id="6Yv-lu-JW6">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7hF-Ux-WhM">
+                                                    <rect key="frame" x="8" y="12.666666666666664" width="374" height="45"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCS-Ir-x6n">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="24" id="PDX-gC-ppw"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-pd-ttN">
+                                                            <rect key="frame" x="0.0" y="24" width="374" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="xpj-ey-1Dh"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="kRv-pd-ttN" secondAttribute="trailing" id="5th-Wp-h4K"/>
+                                                        <constraint firstItem="xCS-Ir-x6n" firstAttribute="leading" secondItem="7hF-Ux-WhM" secondAttribute="leading" id="FDj-eu-hHs"/>
+                                                        <constraint firstItem="kRv-pd-ttN" firstAttribute="leading" secondItem="7hF-Ux-WhM" secondAttribute="leading" id="I0G-Z1-DUm"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xCS-Ir-x6n" secondAttribute="trailing" id="NCh-Fu-wHe"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="7hF-Ux-WhM" secondAttribute="trailing" constant="8" id="7Xw-uZ-V0x"/>
+                                                <constraint firstItem="7hF-Ux-WhM" firstAttribute="leading" secondItem="6Yv-lu-JW6" secondAttribute="leading" constant="8" id="BxI-L8-o2A"/>
+                                                <constraint firstItem="7hF-Ux-WhM" firstAttribute="centerY" secondItem="6Yv-lu-JW6" secondAttribute="centerY" id="EtS-JG-o6Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subtitle" destination="kRv-pd-ttN" id="6vO-I4-wZw"/>
+                                            <outlet property="title" destination="xCS-Ir-x6n" id="Ljc-U5-s3n"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

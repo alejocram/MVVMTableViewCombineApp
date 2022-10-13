@@ -35,12 +35,20 @@ class PhotoListViewController: UIViewController {
 
 extension PhotoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = viewModel.photoNames[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoListTableViewCell else {
+            fatalError("TableViewCell doesn't exits in storyboard")
+        }
+        cell.title.text = viewModel.photoNames[indexPath.row]
+        cell.subtitle?.text = viewModel.photoDescriptions[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.photoNames.count
     }
+}
+
+class PhotoListTableViewCell: UITableViewCell {
+    @IBOutlet var title: UILabel!
+    @IBOutlet var subtitle: UILabel!
 }
