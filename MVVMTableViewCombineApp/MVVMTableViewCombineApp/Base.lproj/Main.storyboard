@@ -66,7 +66,6 @@
                                         <connections>
                                             <outlet property="subtitle" destination="kRv-pd-ttN" id="6vO-I4-wZw"/>
                                             <outlet property="title" destination="xCS-Ir-x6n" id="Ljc-U5-s3n"/>
-                                            <segue destination="exA-8c-M2R" kind="show" id="qr2-8Q-Sct"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -93,13 +92,13 @@
         <!--Photo Detail View Controller-->
         <scene sceneID="g4Q-9m-6DA">
             <objects>
-                <viewController id="exA-8c-M2R" customClass="PhotoDetailViewController" customModule="MVVMTableViewCombineApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoDetailViewController" id="exA-8c-M2R" customClass="PhotoDetailViewController" customModule="MVVMTableViewCombineApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UJj-Mj-CjV">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgo-p6-N5b">
-                                <rect key="frame" x="8" y="99" width="374" height="21"/>
+                                <rect key="frame" x="8" y="55" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

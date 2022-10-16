@@ -50,15 +50,13 @@ extension PhotoListViewController: UITableViewDataSource {
 }
 
 extension PhotoListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        viewModel.indexPhotoSelected = indexPath.row
-        return indexPath
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as? PhotoDetailViewController
-        vc?.photoName = viewModel.photoNames[viewModel.indexPhotoSelected!]
-        vc?.photoDescription = viewModel.photoDescriptions[viewModel.indexPhotoSelected!]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let photoDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "PhotoDetailViewController") as? PhotoDetailViewController else {
+            fatalError("View Controller doesn't find in storyboard")
+        }
+        photoDetailViewController.photoName = viewModel.photoNames[indexPath.row]
+        photoDetailViewController.photoDescription = viewModel.photoDescriptions[indexPath.row]
+        self.navigationController?.pushViewController(photoDetailViewController, animated: true)
     }
 }
 
