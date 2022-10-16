@@ -108,13 +108,15 @@
                         <viewLayoutGuide key="safeArea" id="xLb-JU-imm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hgo-p6-N5b" firstAttribute="centerX" secondItem="UJj-Mj-CjV" secondAttribute="centerX" id="eur-uz-Ibf"/>
                             <constraint firstItem="xLb-JU-imm" firstAttribute="trailing" secondItem="hgo-p6-N5b" secondAttribute="trailing" constant="8" id="hUR-JD-5oI"/>
                             <constraint firstItem="hgo-p6-N5b" firstAttribute="leading" secondItem="xLb-JU-imm" secondAttribute="leading" constant="8" id="oIK-3l-BJM"/>
                             <constraint firstItem="hgo-p6-N5b" firstAttribute="top" secondItem="xLb-JU-imm" secondAttribute="top" constant="8" id="yEY-fK-fod"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Lp-u4-c1R"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="hgo-p6-N5b" id="AvO-Yy-Ptg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCw-lg-WbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
