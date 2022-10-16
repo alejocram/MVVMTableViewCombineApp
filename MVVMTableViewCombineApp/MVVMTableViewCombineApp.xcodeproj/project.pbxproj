@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5946D41628FBADAA001616A8 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5946D41528FBADAA001616A8 /* PhotoDetailViewController.swift */; };
 		59E6538E28F70214004AA727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6538D28F70214004AA727 /* AppDelegate.swift */; };
 		59E6539028F70214004AA727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6538F28F70214004AA727 /* SceneDelegate.swift */; };
 		59E6539228F70214004AA727 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E6539128F70214004AA727 /* PhotoListViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5946D41528FBADAA001616A8 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		59E6538A28F70214004AA727 /* MVVMTableViewCombineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTableViewCombineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59E6538D28F70214004AA727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59E6538F28F70214004AA727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				59E6539128F70214004AA727 /* PhotoListViewController.swift */,
+				5946D41528FBADAA001616A8 /* PhotoDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				59E6539228F70214004AA727 /* PhotoListViewController.swift in Sources */,
 				59E653AA28F70864004AA727 /* PhotoListViewModel.swift in Sources */,
 				59E6538E28F70214004AA727 /* AppDelegate.swift in Sources */,
+				5946D41628FBADAA001616A8 /* PhotoDetailViewController.swift in Sources */,
 				59E653A328F70599004AA727 /* APIService.swift in Sources */,
 				59E6539028F70214004AA727 /* SceneDelegate.swift in Sources */,
 				59E653A728F70716004AA727 /* Photo.swift in Sources */,
