@@ -8,11 +8,16 @@
 import UIKit
 
 class PhotoDetailViewController: UIViewController {
-
+    @IBOutlet var descriptionLabel: UILabel!
+    
+    var photoName: String?
+    var photoDescription: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = photoName
+        descriptionLabel.text = photoDescription
     }
     
 

@@ -12,6 +12,8 @@ final class PhotoListViewModel {
     @Published var photoNames: [String] = []
     @Published var photoDescriptions: [String?] = []
     
+    var indexPhotoSelected: Int?
+    
     private var cancellables: [AnyCancellable] = []
     
     func getPhotos() {

@@ -16,6 +16,7 @@ class PhotoListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         
         initVM()
     }
@@ -45,6 +46,19 @@ extension PhotoListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.photoNames.count
+    }
+}
+
+extension PhotoListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        viewModel.indexPhotoSelected = indexPath.row
+        return indexPath
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? PhotoDetailViewController
+        vc?.photoName = viewModel.photoNames[viewModel.indexPhotoSelected!]
+        vc?.photoDescription = viewModel.photoDescriptions[viewModel.indexPhotoSelected!]
     }
 }
 
